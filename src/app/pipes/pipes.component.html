@@ -1,0 +1,109 @@
+<div class="container-fluid float-lg-start fw-lighter  border-4 border-bottom border-dark " id="div1"><u>Employee Registration</u></div> <br>
+                                 <div class="card">
+          <form [formGroup]="userForm"  (ngSubmit)="onSubmit()"  class="">
+                      <div class=" mt-5">
+                              <div class="form-row  ">
+                                  <div class="col-md-12 ">
+                                          <div  class="form-group"><label for="name">Name:</label></div>
+                                              <div class="form-row">
+                                                      <div class="col">
+                                                               <input type="text" formControlName="name" class="form-control" placeholder="Enter Employee Name" >
+                                                               <!-- <span *ngIf="(userFormControl.name.touched || submitted) && userFormControl.name.errors?.required">
+                                                                Name is required
+                                                              </span> -->
+                                                      </div>
+                                              </div>
+                                            </div>  
+                                              <br>
+                                              <div  class="form-group"><label for="name">Designnation:</label></div>
+                                              <div class="form-row">
+                                                  <div class="col">
+                                                      <select  formControlName="designnation"  aria-placeholder="Enter Designnation" class="form-select" aria-label="Default select example">
+                                                          <option selected>Enter Designnation</option>
+                                                          <option value="CEO">CEO</option>
+                                                          <option value="Manager">Manager</option>
+                                                          <option value="HR">HR</option>
+                                                          <option value="Employee">Employee</option>
+                                                        </select>
+                                                  </div>
+                                          </div>   
+                                          <br>
+                                          <div  class="form-group"><label for="name">Salary:</label></div>
+                                          <div class="form-row">
+                                              <div class="col"><input type="text" formControlName="salary" class="form-control" placeholder="Enter Salary"></div>
+                                   
+                                      <br>
+                                      <div  class="form-group"><label for="name">Email:</label></div>
+                                          <div class="form-row">
+                                              <div class="col"><input type="text" formControlName="email" class="form-control" placeholder="Enter Email"></div>
+                                      </div>  
+                                      <br>
+                                      <div  class="form-group"><label for="name">Mobile:</label></div>
+                                      <div class="form-row">
+                                          <div class="col"><input type="tel" formControlName="mobile" class="form-control" placeholder="Enter Mobile Number"></div>
+                                  </div>  
+                                  <br>
+                                  <div  class="form-group"><label for="name">Qualification:</label></div>
+                                  <div class="form-row">
+                                      <div class="col"><select  formControlName="qualification"   class="form-select" aria-label="Default select example">
+                                          <option selected>Enter Qualification</option>
+                                          <option value="MBA">MBA</option>
+                                          <option value="MCA">MCA</option>
+                                          <option value="Engineering(B-Tech)">Engineering(B-Tech)</option>
+                                        </select>
+                                      </div>
+                                  </div>  
+                                  <br>
+                                  <div  class="form-group"><label for="name">Manager:</label></div>
+                                  <div class="form-row">
+                                      <div class="col"><input type="text" formControlName="manager" class="form-control" placeholder="Enter Manager"></div>
+                              </div>  
+                              <div class="form-row mt-4" >
+                                <div class="col-md-6">
+                                     <span  style="padding-left:30px"><button type="button" class="btn btn-primary" (click)="addItem()">Update</button></span>&nbsp; &nbsp;
+                                 </div>
+                            </div>            
+                          </div><br>       
+                          </div>
+                      </div>        
+              </form>
+      </div><br>      
+    <div class="container-fluid float-lg-start fw-lighter  border-4 border-bottom border-dark" id="div1"><u>Register Employee</u></div>
+         <div class="col-md-12 mt-4 mb-4">
+                <br><br> <br>
+                <table class="table  table-border text-center margin-2 border border-2 ">
+                    <thead>
+                                <tr class="table-primary">
+                                       <th>Index</th>
+                                       <th  >Employee Name</th>
+                                       <th >Designnation</th>
+                                       <th >Salary</th>
+                                       <th >Email</th>
+                                       <th >Mobile</th>
+                                       <th >Qualification</th>
+                                       <th >Manager</th>
+                                       <th >Actions</th>
+                                       
+                                </tr>
+                    </thead>
+                   <tbody>
+                            <tr *ngFor="let item of listData; let i=index" class="table-border">
+                                       <td><span>{{i+1}}</span></td>
+                                     <td><span>{{item.name}}</span></td>
+                                     <td><span>{{item.designnation}}</span></td>
+                                     <td><span>{{item.salary}}</span></td>
+                                     <td><span>{{item.email}}</span></td>
+                                     <td><span>{{item.mobile}}</span></td>
+                                     <td><span>{{item.qualification}}</span></td>
+                                     <td><span>{{item.manager}}</span></td>
+                                     <td>
+                                           <tr>
+                                               <td><a href="#">Edit</a></td>
+                                               <td><a href="#">Delete</a></td>
+                                            </tr>
+                                    </td>
+                                   </tr>        
+                     </tbody>        
+                 </table>           
+    </div>
+  
