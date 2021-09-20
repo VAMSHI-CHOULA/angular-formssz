@@ -377,3 +377,10 @@ password - For strong password (.ts)
 // }
 // }
 -----------------------------------------------------------------------------------------------------------
+/* .box{
+    width: 50%;
+    border:1px solid rgb(145,138,138);
+    border-radius: 25px;
+    padding: 0px 20px 20px 20px;
+    margin-left: 400px;
+} */
