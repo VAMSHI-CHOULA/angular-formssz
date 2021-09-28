@@ -8,10 +8,7 @@
                                               <div class="form-row">
                                                       <div class="col">
                                                                <input type="text" formControlName="name" class="form-control" placeholder="Enter Employee Name" >
-                                                               <!-- <span *ngIf="(userFormControl.name.touched || submitted) && userFormControl.name.errors?.required">
-                                                                Name is required
-                                                              </span> -->
-                                                      </div>
+                                                    </div>
                                               </div>
                                             </div>  
                                               <br>
@@ -88,15 +85,15 @@
                     </thead>
                    <tbody>
                             <tr *ngFor="let item of listData; let i=index" class="table-border">
-                                       <td><span>{{i+1}}</span></td>
-                                     <td><span>{{item.name}}</span></td>
-                                     <td><span>{{item.designnation}}</span></td>
-                                     <td><span>{{item.salary}}</span></td>
-                                     <td><span>{{item.email}}</span></td>
-                                     <td><span>{{item.mobile}}</span></td>
-                                     <td><span>{{item.qualification}}</span></td>
-                                     <td><span>{{item.manager}}</span></td>
-                                     <td>
+                                      <td><span>{{i+1}}</span></td>
+                                      <td><span>{{item.name}}</span></td>
+                                      <td><span>{{item.designnation}}</span></td>
+                                      <td><span>{{item.salary}}</span></td>
+                                      <td><span>{{item.email}}</span></td>
+                                      <td><span>{{item.mobile}}</span></td>
+                                      <td><span>{{item.qualification}}</span></td>
+                                      <td><span>{{item.manager}}</span></td>
+                                      <td>
                                            <tr>
                                                <td><a href="#">Edit</a></td>
                                                <td><a href="#">Delete</a></td>
@@ -106,4 +103,5 @@
                      </tbody>        
                  </table>           
     </div>
+    
   

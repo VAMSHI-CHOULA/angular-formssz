@@ -5,7 +5,15 @@ import { EmpDetailsComponent } from './emp-details/emp-details.component';
 import { PipesComponent } from './pipes/pipes.component';
 // import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { HeaderComponent } from './header/header.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { MdButtonModule } from '@angular/material';
+// import { StudentlistComponent } from './studentlist/studentlist.component';
+// import { StudentDetailsComponent } from './student-details/student-details.component';
+// import { FlexLayoutModule } from '@angular/flex-layout';
+// import { MediaObserver, MediaChange } from '@angular/flex-layout';
+// import {Subscription } from 'rxjs';
 // import { YComponent } from './y/y.component';
 // import { VisitingcardComponent } from './visitingcard/visitingcard.component';
 // import { ProdutComponent } from './produt/produt.component';
@@ -15,7 +23,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     EmpDetailsComponent,
     PipesComponent,
-   
+    HeaderComponent,
+    // StudentlistComponent,
+    // StudentDetailsComponent,
     // VisitingcardComponent,
     //    ProdutComponent,
     //    DatabindingComponent
@@ -23,11 +33,15 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     // FormsModule,
-    ReactiveFormsModule
-    
+    ReactiveFormsModule,
+    FlexLayoutModule,
+    BrowserAnimationsModule,
+    // MdtButtonModule,
   ],
   providers: [
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}

@@ -13,7 +13,6 @@ export class EmpDetailsComponent implements OnInit{
   registerForm!: FormGroup;
   submitted = false;
   listData: any;
-
   constructor(
     private fb: FormBuilder,
     private customValidator: CustomvalidationService,
@@ -31,13 +30,16 @@ export class EmpDetailsComponent implements OnInit{
   }
   ngOnInit(): void {
     this.registerForm = this.fb.group({
+      id:['', Validators.required],
       name: ['', Validators.required],
       salary: ['', Validators.required],
       designnation:['', Validators.required],
       email:['',Validators.required, Validators.email],
       mobile:['',Validators.required],
+      gender:['',Validators.required],
       qualification:['',Validators.required],
       manager:['',Validators.required],
+      languagesknown:['',Validators.required],
     });
   }
   public addItem(): void{

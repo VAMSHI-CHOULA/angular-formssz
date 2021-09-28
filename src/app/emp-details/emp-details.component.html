@@ -1,22 +1,22 @@
-                <div class="card-body">
+                <!-- <div class="card-body">
                       <form class="form"  [formGroup]="registerForm" *ngIf="!submitted" (ngSubmit)="onSubmit()" >  
+                        <div class="form-group">
+                          <label> Employee Id</label>
+                         <input type="text" class="form-control" formControlName="id">
+                      </div>
                                        <div class="form-group">
-                                           <label>Name*</label>
-                                          <input type="text" class="form-control" formControlName="name">
+                                                           <label>Employee Name*</label>
+                                                          <input type="text" class="form-control" formControlName="name">
                                        </div>
                                         <span class="text-danger"  *ngIf="(registerFormControl.name.touched || submitted) && registerFormControl.name.errors?.required">Name is required</span>
                                         <div  class="form-group"><label for="name">Designnation*</label></div>
                                          <select  formControlName="designnation" aria-placeholder="Enter Designnation" class="form-select" aria-label="Default select example">
-                                            <option value="" ></option>
-                                            <option value="CEO">CEO</option>
-                                            <option value="Manager">Manager</option>
-                                            <option value="HR">HR</option>
-                                            <option value="Employee">Employee</option>
+                                                       <option value="" ></option>
+                                                       <option value="Software Developer">Software Developer</option>
+                                                       <option value="Manager">Manager</option>
+                                                       <option value="Software Tester">Software Tester</option>
+                                                       <option value="Admin">Admin</option>
                                          </select>
-                                          <span class="text-danger"
-                                              *ngIf="(registerFormControl.designnation.touched || submitted) && registerFormControl.designnation.errors?.required">
-                                              Designnation is required
-                                          </span>
                                           <div class="form-group">
                                                   <label>Salary*</label>
                                                   <input type="text" class="form-control" formControlName="salary">
@@ -32,59 +32,82 @@
                                                    <input type="text"  class="form-control"  formControlName="mobile">
                                                    <span class="text-danger"  *ngIf="(registerFormControl.mobile.touched || submitted) && registerFormControl.mobile.errors?.required">Mobile Number is required</span>
                                           </div>
-                                          <div class="form-group">
-                                                 <label>Qualification*</label>
-                                                 <select  formControlName="qualification" aria-placeholder="Enter Qualification" class="form-select" aria-label="Default select example">
-                                                  <option value="" ></option>
-                                                  <option value="BE/B-tech">BE/B-tech</option>
-                                                  <option value="MBA">MBA</option>
-                                                  <option value="M-tech">M-tech</option>
-                                               </select>
-                                               <span class="text-danger"  *ngIf="(registerFormControl.qualification.touched || submitted) && registerFormControl.qualification.errors?.required">Qualification is required</span>
+                                          <div class="form-group ">
+                                         <label>Gender*</label><br/>
+                                            <div class="form-check form-check-inline">
+                                                                 <input type="radio"  class=" form-check-input" name="inlineRadioOptions" id="inlineRadio1" value="Male"  formControlName="gender">
+                                                                 <label class="form-check-label" for="inlineRadio1">Male</label>
                                           </div>
+                                            <div class="form-check form-check-inline">
+                                                              <input type="radio"  class="form-check-input" name="inlineRadioOptions" id="inlineRadio2" value="Female"  formControlName="gender">
+                                                              <label class="form-check-label" for="inlineRadio1">Female</label>
+                                            </div>
+                                                              <span class="text-danger"  *ngIf="(registerFormControl.mobile.touched || submitted) && registerFormControl.mobile.errors?.required">Gender  is required</span>
+                                  </div>
                                           <div class="form-group">
-                                                     <label>Manager*</label>
-                                                     <input type="text" class="form-control" formControlName="manager">
-                                                     <span class="text-danger"   *ngIf="(registerFormControl.manager.touched || submitted)&& registerFormControl.manager.errors?.required">Manager is required</span>                         
-                                           </div>
-                                          <div class="form-group">
-                                            <tr>&nbsp;&nbsp;&nbsp;&nbsp;</tr>
-                                              <td><button type="submit" class="btn btn-success"  (click)="addItem()">Update</button></td>
-                                              <td>&nbsp;  &nbsp;&nbsp;&nbsp;</td>
-                                              <td><button type="submit" class="btn btn-success"  (click)="addItem()">Reset</button></td>
-                                           </div>
-                      </form>
-                  </div>
-                    <table class="table  table-border text-center margin-2 border border-2 ">
-                                <thead>
-                                    <tr class="table-primary">
-                                           <th>Index</th>
-                                           <th  >Employee Name</th>
-                                           <th >Designnation</th>
-                                           <th >Salary</th>
-                                           <th >Email</th>
-                                           <th >Mobile</th>
-                                           <th >Qualification</th>
-                                           <th >Manager</th>
-                                           <th >Actions</th>
-                                    </tr>
-                                </thead>
-                            <tbody>
-                                       <tr   *ngFor="let item of listData; let i=index" class="table-border">
-                                                <td><span>{{i+1}}</span></td>
-                                                <td><span>{{item.name}}</span></td>
-                                                <td><span>{{item.designnation}}</span></td>
-                                                <td><span>{{item.salary}}</span></td>
-                                                <td><span>{{item.email}}</span></td>
-                                                <td><span>{{item.mobile}}</span></td>
-                                                <td><span>{{item.qualification}}</span></td>
-                                                <td><span>{{item.manager}}</span></td>
-                                                <td>
-                                                          <tr>
-                                                             <td><a href="#">Edit</a></td>
-                                                             <td><a href="#">Delete</a></td>
-                                                          </tr>
-                                                  </td>
-                                       </tr>        
-                            </tbody>        
-                     </table>           
+                                            <label>Languages Known*</label>
+                                            <div class="form-check">
+                                                                 <input class="form-check-input"     formControlName="languagesknown" type="checkbox" value="Telugu" id="flexCheckDefault">
+                                                                 <label class="form-check-label" for="flexCheckDefault">Telugu</label>
+                                            </div>
+                                            <div class="form-check">
+                                                                     <input class="form-check-input"  formControlName="languagesknown" type="checkbox" value="Hindi" id="flexCheckDefault">
+                                                              <label class="form-check-label" for="flexCheckDefault"> Hindi</label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                        <input class="form-check-input" type="checkbox"  formControlName="languagesknown" value="English" id="flexCheckChecked" >
+                                                                        <label class="form-check-label" for="flexCheckChecked">English</label>
+                                                            </div>
+                                                          </div>
+                                                          <div class="form-group">
+                                                                        <label>Qualification</label>
+                                                                        <input type="text"  class="form-control"  formControlName="qualification">
+                                                          </div> -->
+                                                          <!-- <div class="form-group">
+                                                                     <label>Manager*</label>
+                                                                     <input type="text" class="form-control" formControlName="manager">
+                                                                     <span class="text-danger"   *ngIf="(registerFormControl.manager.touched || submitted)&& registerFormControl.manager.errors?.required">Manager is required</span>                         
+                                                           </div> -->
+                                                          <!-- <div class="form-group">
+                                                            <tr>&nbsp;&nbsp;&nbsp;&nbsp;</tr>
+                                                                      <td><button type="submit" class="btn btn-success"  (click)="addItem()">Update</button></td>
+                                                                      <td>&nbsp;  &nbsp;&nbsp;&nbsp;</td>
+                                                                      <td><button type="submit" class="btn btn-success"  (click)="addItem()">Reset</button></td>
+                                                           </div>
+                                      </form>
+                                  </div>
+                                    <table >
+                                                <thead>
+                                                    <tr class="table-primary">
+                                                           <th>Index</th>
+                                                           <th  >Employee Name</th>
+                                                           <th >Designnation</th>
+                                                           <th >Salary</th>
+                                                           <th >Email</th>
+                                                           <th >Mobile</th>
+                                                           <th >Gender</th>
+                                                           <th >Languages Known</th>
+                                                           <th >Qualification</th>
+                                                    </tr>
+                                                </thead>
+                                            <tbody>
+                                                       <tr   *ngFor="let item of listData; let i=index" class="table-border">
+                                                                <td><span>{{i+1}}</span></td>
+                                                                <td><span>{{item.name}}</span></td>
+                                                                <td><span>{{item.designnation}}</span></td>
+                                                                <td><span>{{item.salary}}</span></td>
+                                                                <td><span>{{item.email}}</span></td>
+                                                                <td><span>{{item.mobile}}</span></td>
+                                                                <td><span>{{item.gender}}</span></td>
+                                                                <td><span>{{item.languagesknown}}</span></td>
+                                                                <td><span>{{item.qualification}}</span></td>
+                                                                <td>
+                                                                          <tr>
+                                                                                <td><a href="#">Edit</a></td>
+                                                                                <td><a href="#">Delete</a></td>
+                                                                          </tr>
+                                                                  </td>
+                                                       </tr>        
+                                            </tbody>        
+                                     </table>            -->
+                                     

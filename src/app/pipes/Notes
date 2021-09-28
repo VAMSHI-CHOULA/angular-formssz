@@ -384,3 +384,138 @@ password - For strong password (.ts)
     padding: 0px 20px 20px 20px;
     margin-left: 400px;
 } */
+
+what is service? what is the sue of service?
+
+<!-- <ul *ngFor="let x of students">
+  <li>
+  {{x.name}}
+  </li>
+  </ul> -->
+
+  this.students = this._stdService.getStudents();
+  private _stdService:StudentService
+
+  <h2>
+    Student-details component!
+  </h2>
+  
+<ul *ngFor="let x of students">
+<li>
+{{x.id}} - {{x.name}} - {{x.course}}
+</li>
+</ul>
+
+<h1>Services</h1>
+    <h2>
+      Studentlist Component!
+    </h2>
+    
+<ul *ngFor="let x of students">
+<li>
+{{x.name}}
+</li>
+</ul> 
+
+StudentService
+   
+getStudents(){
+  return [
+    {"id":1, "name":"Rama", "course":"Angular"},
+    {"id":2, "name":"Sita", "course":"react"},
+  ]; 
+}
+import { StudentService } from './student.service';
+
+import { StudentService } from '../student.service';
+private  _stdService: StudentService
+this.students = this._stdService.getStudents();
+-------------------------------------------------------------------------------------------------
+*select element *
+<!-- <div class="form-group">
+  <label>Languages Known(Checkbox)</label>
+  <select  formControlName="qualification" aria-placeholder="Enter Qualification" class="form-select" aria-label="Default select example">
+   <option value="" ></option>
+   <option value="BE/B-tech">BE/B-tech</option>
+   <option value="MBA">MBA</option>
+   <option value="M-tech">M-tech</option>
+</select>
+</div> -->
+When i enter the values and click update  the form row should be submitted but when i refresh it the row is not visible why?
+Toast normal ga work chestey raledu kadha and 
+== and === are same yes or no?
+a: yes same x=5 
+x==5 returns output to true.
+x===5 returns output to true.
+x=5 returns output to 5 
+
+
+3.5 cm= 132px width
+2.5 cm= 94 px height
+s- 
+75 width
+170 height
+
+technoxis
+togglenow 
+c2s 
+-----------------------
+Applied Companies-
+freshersworld:
+3 
+Indeed:
+2
+-----------------------
+Domain Price-
+arunachalarehab.com -  750/year
+arunachalarehab.in -   549/year
+Hosting Price-
+79/m   => 79*12= 1100
+Total =
+750+1100 = 1850   (.com)
+549+1100 = 1649   (.in)
+
+
+Godaddy-
+Domain
+149/m 
+Hosting
+149/m
+
+Actual Price-
+Domain:
+Hostinger-  
+drarunachala.com - [699.00/yr ]
+drarunachala.in - [479.00/yr]
+Hosting:
+Hosting- 948/y
+------------------------------------------------------------------------------------------------------- 
+ <!-- <span *ngIf="(userFormControl.name.touched || submitted) && userFormControl.name.errors?.required">
+  Name is required
+</span> -->
+
+what i have absorved?
+a: 
+@angular folder inside node_modules 
+material folder inside the @angular 
+
+
+what the links you have been absoved in the index,html for material ? 
+a: 
+fonts dhi peddaga vunde line dhi okati and chinnaga vunde line okati two are links kani first link lopala 200,300, vundena 300,400 vundena chuudali .
+okkasari check cheskovali w
+It should be  fonts.googleapis.com site nundi vachedhi and 300,400,500 ani vastadhi 1st line lopala.
+2nd line lopala material+icons ani vastadhi okkasari check cheskovali.
+
+what  is the command to get the material package into angular?
+a: 
+ng new @angular/material
+-----------------------Angular Material----------------------------------
+1.
+material.angular.io   -  website lopala that is not worked appudanna free time lo try chesesko 
+2.
+owel carousel installtion in angular ani kotti documentation follow ayipoyi execute chesesko.
+https://www.npmjs.com/package/ngx-owl-carousel-o
+3. 
+Monna rani daggara practise chesko forms lopala ok
+-------------------------------------------------------------------------------------------------

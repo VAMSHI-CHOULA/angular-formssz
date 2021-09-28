@@ -1,2 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 /* @import '~bootstrap/dist/css/bootstrap.min.css'; */
+h1{
+    color: red;
+    text-align:center;
+    font-family: popins;
+    font-weight: 900;
+}
+h2{
+    color:blue;
+    font-family: popins;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
